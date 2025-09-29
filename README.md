@@ -46,9 +46,13 @@ This program demonstrates how to create a single node and display its value.
 
 ALGORITHM:
 1> Start
+
 2> Create a Node class with val and next.
+
 3> Instantiate a node with a specific value (e.g., 20).
+
 4> Display the value and next pointer of the node.
+
 5> End
 
 # Program 2: Creating and Traversing a Linked List
@@ -57,11 +61,17 @@ This program demonstrates how to create multiple nodes, link them, and traverse 
 
 ALGORITHM:
 1> Start
+
 2> Create a Node class with val and next.
+
 3> Instantiate multiple nodes with values (e.g., 10, 20, 30).
+
 4> Link the nodes by assigning next pointers.
+
 5> Use a temporary pointer to traverse the list from the head node.
+
 6> Print the value of each node during traversal.
+
 7> End
 
 # Conclusion:
