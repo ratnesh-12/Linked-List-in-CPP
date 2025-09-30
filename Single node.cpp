@@ -16,3 +16,6 @@ int main(){
     cout<<n->val<<" "<<n->next<<endl;
     return 0;
 }
+
+OUTPUT:
+20 0
