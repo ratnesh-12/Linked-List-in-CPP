@@ -1,76 +1,183 @@
 # Linked List in CPP
 
-# Aim:
 
-To implement a Singly Linked List in C++ and demonstrate node creation, linking, and traversal.
+* Aim: To study and implement Linked List in C++ for dynamic memory allocation and efficient data management.
 
-# Tools Used:
+* Tools Used: IDE, C++ compiler, classes, pointers, dynamic memory (new and delete).
 
-IDE, C++ compiler, Node class, pointers.
+* Theory:
 
-# Theory:
+In C++, a Linked List is a linear data structure where elements (called nodes) are connected using pointers. Unlike arrays, linked lists do not store elements in contiguous memory locations; instead, each node contains data and a pointer to the next node.
 
-A Linked List is a dynamic linear data structure where each node contains:
+-The first node is called the head of the list.
 
-Data – the value stored in the node.
+-The last node points to NULL, indicating the end of the list.
 
-Pointer – reference to the next node.
+-Linked lists allow dynamic memory allocation, meaning nodes can be created and deleted at runtime.
 
-Singly Linked List: Each node points only to the next node.
-Key Features:
+🔹 *Key Features of Linked Lists:*
 
-Dynamic memory allocation.
+* Dynamic size (can grow or shrink during execution).
 
-Efficient insertion/deletion.
+* Efficient insertions and deletions compared to arrays.
 
-Sequential access using pointers.
+* Sequential access (no direct indexing like arrays).
 
-Node Structure in C++:
+🔹 *Basic Structure of a Linked List Node:*
 
-class Node {
+    class Node {
     public:
-        int val;       // stores data
-        Node* next;    // points to next node
-};
+    int data;      // stores the value
+    Node* next;    // pointer to the next node
 
-# Program 1: Single Node Creation
+    Node(int val) {
+        data = val;
+        next = NULL;
+    }
+    };
 
-Purpose: Demonstrate creation of a single node.
 
- ALGORITHM: 
+🔹 *Common Operations in Linked List:*
 
-1> Start <br>
-2> Define Node class with val and next. <br>
-3> Instantiate a node with a specific value. <br>
-4> Display node value and pointer. <br>
+* Insertion
+
+-At the beginning (head).
+
+-At the end (tail).
+
+-At a specific position.
+
+* Deletion
+
+-From the beginning.
+
+-From the end.
+
+-From a given position.
+
+* Traversal
+
+-Display all nodes by moving from head to NULL.
+
+
+🔹 *Advantages of Linked List:*
+
+* Dynamic memory allocation, no fixed size.
+
+* Efficient insertions and deletions compared to arrays.
+
+* Can implement advanced data structures (stacks, queues, graphs).
+
+
+# Single node of the Linked List:
+
+This program demonstrates how to create a node for a singly linked list. Each node contains a value and a pointer to the next node. Initially, the next pointer is set to NULL.
+
+ALGORITHM:
+
+1> Start
+
+2> Define Node class with:
+
+* Public members:
+
+val : stores node data
+
+next : pointer to next node
+
+* Constructor Node(int data) :
+
+Assign val = data
+
+Initialize next = NULL
+
+3> In main function
+
+* Create a Node object n with value 20
+
+* Display n->val and n->next
+
+4> End
+
+# Add multiple nodes at the end of the Linked List:
+
+This program demonstrates how to create a singly linked list and insert nodes at the end. Each node contains a value and a pointer to the next node. The list can be traversed to display all elements.
+
+ALGORITHM:
+
+1> Start
+
+2> Define Node class with:
+
+* Public members:
+
+  * val : stores node data
+
+  * next : pointer to next node
+
+* Constructor Node(int data) :
+
+  * Assign val = data
+
+  * Initialize next = NULL
+
+3> Define LinkedList class with:
+
+* Public member head : pointer to the first node
+
+* Constructor initializes head = NULL
+
+* Method insertAtEnd(data) :
+
+   * Create a new node with given data
+
+   * If head is NULL, set head = newNode
+
+   * Else, traverse to the last node and set its next = newNode
+
+4> In main function
+
+* Create LinkedList object list
+
+* Insert elements 10, 20, 30, 40 at the end
+
+* Display the linked list
+
 5> End
 
-- Structure:
+# Add multiple nodes at the start of the Linked List:
 
-Node contains val and next.
+This program demonstrates how to create a singly linked list and insert nodes at the beginning of the list. Each node contains a value and a pointer to the next node. The list can be traversed to display all elements.
 
-next is initialized to NULL for a single node.
+ALGORITHM:
 
-# Program 2: Linked List Traversal
+1> Start
 
-Purpose: Demonstrate creation, linking, and traversal of multiple nodes.
+2> Define Link (Node) class with:
 
- ALGORITHM:
+3> Define insert_head function
 
-1> Start <br>
-2> Define Node class with val and next. <br>
-3> Instantiate multiple nodes with values. <br>
-4> Link nodes using next pointers.<br>
-5> Traverse the list from head node using a temporary pointer. <br>
-6> Print each node’s value. <br>
-7> End
+* Create a new node with given data
 
-- Structure:
+* Set new node’s next pointer to current head
 
-Multiple Node objects linked via next pointers.
+* Update head to point to new node
 
-Traversal uses a temporary pointer starting from the head node.
+4> Define disp function
+
+* Traverse from head to end
+
+* Print each node’s data followed by ->
+
+* End with NULL
+
+5> In main function
+
+* Initialize head = NULL
+
+6> End
+
 
 # Conclusion:
 
-The experiment demonstrates Singly Linked List concepts: creating nodes, linking them, and traversing the list. It emphasizes the use of pointers for dynamic memory management and sequential access, forming the foundation for advanced data structures like stacks, queues, and graphs.
+Linked lists in C++ provide a flexible way to store and manage data dynamically. They allow efficient insertion and deletion compared to arrays, though at the cost of extra memory for pointers and sequential access. Overall, they are a powerful foundation for implementing advanced data structures.
